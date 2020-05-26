@@ -41,7 +41,8 @@
     </build>
 
     <scm>
-        <developerConnection>scm:git:https://github.com/bartoszjarzab/sfg-pet-clinic.git</developerConnection>
+        <connection>scm:git:https://bartoszjarzab:GIT1logos4@github.com/bartoszjarzab/sfg-pet-clinic.git</connection>
+        <developerConnection>scm:git:https://bartoszjarzab:GIT1logos4@github.com/bartoszjarzab/sfg-pet-clinic.git</developerConnection>
     </scm>
 
 </project>
