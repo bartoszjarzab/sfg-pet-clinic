@@ -14,7 +14,7 @@
     </parent>
     <groupId>com.springframework</groupId>
     <artifactId>sfg-pet-clinic</artifactId>
-    <version>0.0.2</version>
+    <version>0.0.3-SNAPSHOT</version>
     <name>sfg-pet-clinic</name>
     <description>Pet Clinic App</description>
 
@@ -43,7 +43,7 @@
     <scm>
         <connection>scm:git:https://bartoszjarzab:GIT1logos4@github.com/bartoszjarzab/sfg-pet-clinic.git</connection>
         <developerConnection>scm:git:https://bartoszjarzab:GIT1logos4@github.com/bartoszjarzab/sfg-pet-clinic.git</developerConnection>
-      <tag>sfg-pet-clinic-0.0.2</tag>
+      <tag>HEAD</tag>
   </scm>
 
 </project>
