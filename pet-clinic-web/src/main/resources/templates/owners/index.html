@@ -5,6 +5,26 @@
     <title>List of Owners</title>
 </head>
 <body>
-    <h1 th:text="'List of Owners Thymeleaf'">List of Owners</h1>
+<h1 th:text="'List of Owners Thymeleaf'">List of Owners</h1>
+<hr>
+<br>
+<table>
+    <thead>
+    <tr>
+        <th>Id</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each="owner : ${owners}">
+        <td th:text="${owner.id}">generic id</td>
+        <td th:text="${owner.firstName}">generic firstName</td>
+        <td th:text="${owner.lastName}">-generic lastName</td>
+    </tr>
+    </tbody>
+
+
+</table>
 </body>
 </html>

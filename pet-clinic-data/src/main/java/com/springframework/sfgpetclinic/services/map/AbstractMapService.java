@@ -8,6 +8,7 @@ import java.util.Set;
 public abstract class AbstractMapService<T,ID>{
     protected Map<ID, T> map = new HashMap<>();
     Set<T> findAll(){
+        //System.out.println(map.values());
         return new HashSet<>(map.values());
     }
     T findById(ID id){
@@ -15,6 +16,7 @@ public abstract class AbstractMapService<T,ID>{
     }
 
     T save(ID id, T object){
+        //System.out.println("Saving:"+id+","+object);
         map.put(id,object);
         return object;
     }
