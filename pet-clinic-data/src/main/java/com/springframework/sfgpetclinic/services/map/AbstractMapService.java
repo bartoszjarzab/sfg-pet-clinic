@@ -7,7 +7,6 @@ import java.util.*;
 public abstract class AbstractMapService<T extends BaseEntity,ID extends Long>{
     protected Map<Long, T> map = new HashMap<>();
     Set<T> findAll(){
-        //System.out.println(map.values());
         return new HashSet<>(map.values());
     }
     T findById(ID id){
@@ -15,7 +14,6 @@ public abstract class AbstractMapService<T extends BaseEntity,ID extends Long>{
     }
 
     T save(T object){
-        //System.out.println("Saving:"+id+","+object);
         if(object!=null){
             if(object.getId()==null){
                 object.setId(getNextId());
@@ -41,7 +39,6 @@ public abstract class AbstractMapService<T extends BaseEntity,ID extends Long>{
         } catch (NoSuchElementException e){
             nextId=1L;
         }
-
         return nextId;
     }
 
