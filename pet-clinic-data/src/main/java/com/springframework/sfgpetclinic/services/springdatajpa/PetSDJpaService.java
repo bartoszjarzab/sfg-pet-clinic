@@ -22,7 +22,7 @@ public class PetSDJpaService implements PetService {
     }
 
     @Override
-    public Set<Pet> findALL() {
+    public Set<Pet> findAll() {
         Set<Pet> pets = new HashSet<>();
         petRepository.findAll().forEach(pets::add);
         return pets;

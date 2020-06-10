@@ -22,7 +22,7 @@ public class SpecialtySDJpaService implements SpecialtyService {
     }
 
     @Override
-    public Set<Specialty> findALL() {
+    public Set<Specialty> findAll() {
         Set<Specialty> specialties = new HashSet<>();
         specialtyRepository.findAll().forEach(specialties::add);
         return specialties;

@@ -12,7 +12,7 @@ import java.util.Set;
 public class PetMapService extends AbstractMapService<Pet,Long> implements PetService {
 
     @Override
-    public Set<Pet> findALL() {
+    public Set<Pet> findAll() {
 
         return super.findAll();
     }

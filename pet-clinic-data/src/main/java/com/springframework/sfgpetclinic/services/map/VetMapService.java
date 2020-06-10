@@ -22,7 +22,7 @@ public class VetMapService extends AbstractMapService<Vet,Long> implements VetSe
     }
 
     @Override
-    public Set<Vet> findALL() {
+    public Set<Vet> findAll() {
 
         return super.findAll();
     }
