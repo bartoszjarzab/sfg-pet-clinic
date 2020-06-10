@@ -83,9 +83,9 @@ public class OwnerMapService extends AbstractMapService<Owner,Long> implements O
 
     @Override
     public List<Owner> findAllByLastNameLike(String lastName) {
-
+        String lastNameWithoutWildCards=lastName.replace("%","");
         List<Owner> owners = this.findAll().stream()
-                                .filter(owner->owner.getLastName().equalsIgnoreCase(lastName))
+                                .filter(owner->owner.getLastName().contains(lastNameWithoutWildCards))
                                 .collect(Collectors.toList());
         return owners;
     }
