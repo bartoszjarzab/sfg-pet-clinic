@@ -25,6 +25,7 @@ class VisitController {
 
     @InitBinder
     public void setAllowedFields(WebDataBinder dataBinder) {
+
         dataBinder.setDisallowedFields("id");
     }
 
@@ -49,6 +50,7 @@ class VisitController {
     // Spring MVC calls method loadPetWithVisit(...) before initNewVisitForm is called
     @GetMapping("/owners/*/pets/{petId}/visits/new")
     public String initNewVisitForm(@PathVariable Long petId, Model model) {
+
         return "pets/createOrUpdateVisitForm";
     }
 
