@@ -16,11 +16,13 @@ public class PetTypeFormatter implements Formatter<PetType> {
 
     @Autowired
     public PetTypeFormatter(PetTypeService petTypeService) {
+
         this.petTypeService = petTypeService;
     }
 
     @Override
     public String print(PetType petType, Locale locale) {
+
         return petType.getName();
     }
 
