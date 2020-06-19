@@ -38,11 +38,13 @@ public class PetController {
 
     @ModelAttribute("owner")
     public Owner findOwner(@PathVariable Long ownerId) {
+
         return this.ownerService.findById(ownerId);
     }
 
     @InitBinder("owner")
     public void initOwnerBinder(WebDataBinder dataBinder) {
+
         dataBinder.setDisallowedFields("id");
     }
 
@@ -80,13 +82,13 @@ public class PetController {
 
     @PostMapping("/pets/{petId}/edit")
     public String processUpdateForm(Pet pet, BindingResult result, Owner owner, Model model) {
+        pet.setOwner(owner);
         if (result.hasErrors()) {
-            pet.setOwner(owner);
             model.addAttribute("pet", pet);
             return VIEWS_PETS_CREATE_OR_UPDATE_FORM;
         }
         else {
-            owner.getPets().add(pet);
+            //owner.getPets().add(pet);
             petService.save(pet);
             return "redirect:/owners/"+owner.getId();
         }
